@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxybc2d8dbnio"]
+
+[ext_resource type="PackedScene" uid="uid://d086y7w1tmsb3" path="res://scenes/slot.tscn" id="1_sg8pe"]
+[ext_resource type="Script" path="res://scenes/pasivos.gd" id="2_diey7"]
+
+[node name="Pasivos" instance=ExtResource("1_sg8pe")]
+script = ExtResource("2_diey7")
+slot_type = 1
+
+[node name="BUGG" parent="." index="2"]
+theme_override_font_sizes/font_size = 1

@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://cftvqkwog31gh"]
+
+[ext_resource type="Script" path="res://scenes/seleccion.gd" id="1_lp1fn"]
+[ext_resource type="Texture2D" uid="uid://biaurj0h8v7gf" path="res://assets/Fondo principal.jpg" id="2_mokle"]
+[ext_resource type="Texture2D" uid="uid://dcs4lu3gqetpc" path="res://assets/niño.png" id="3_vtvug"]
+[ext_resource type="Texture2D" uid="uid://c4ysmxursros5" path="res://assets/image (3).png" id="4_b3l8x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eegix"]
+size = Vector2(37.6824, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wt34"]
+size = Vector2(21.2961, 20.4937)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qpnc"]
+
+[node name="Seleccion" type="Node2D"]
+script = ExtResource("1_lp1fn")
+
+[node name="FondoPrincipal" type="Sprite2D" parent="."]
+position = Vector2(555.553, 323.684)
+scale = Vector2(0.989079, 0.932331)
+texture = ExtResource("2_mokle")
+
+[node name="Niño" type="Sprite2D" parent="."]
+position = Vector2(786, 298)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_vtvug")
+
+[node name="Area2DBoy" type="Area2D" parent="Niño"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niño/Area2DBoy"]
+position = Vector2(16.6667, 11.1111)
+scale = Vector2(25.8889, 138.111)
+shape = SubResource("RectangleShape2D_eegix")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Niño/Area2DBoy"]
+position = Vector2(824.135, -5.8833)
+scale = Vector2(52.6729, 16.6767)
+shape = SubResource("RectangleShape2D_3wt34")
+
+[node name="Nina" type="Sprite2D" parent="."]
+position = Vector2(362, 300)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_b3l8x")
+
+[node name="Area2DNina" type="Area2D" parent="Nina"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nina/Area2DNina"]
+position = Vector2(85, 0)
+scale = Vector2(48.6, 135.8)
+shape = SubResource("RectangleShape2D_2qpnc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Nina/Area2DNina"]
+position = Vector2(-790, -35)
+scale = Vector2(52.6729, 16.6767)
+shape = SubResource("RectangleShape2D_3wt34")
+
+[node name="titulo" type="Label" parent="."]
+offset_left = -93.0
+offset_top = 460.0
+offset_right = 1241.0
+offset_bottom = 725.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "Seleccione un personaje para jugar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 93.0
+offset_top = 251.0
+offset_right = 364.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "NIÑA"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 842.0
+offset_top = 255.0
+offset_right = 1075.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "NIÑO"
+
+[connection signal="input_event" from="Niño/Area2DBoy" to="." method="_on_area_2d_boy_input_event"]
+[connection signal="mouse_entered" from="Niño/Area2DBoy" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Niño/Area2DBoy" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="Nina/Area2DNina" to="." method="_on_area_2d_nina_input_event"]
+[connection signal="mouse_entered" from="Nina/Area2DNina" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Nina/Area2DNina" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Label" to="." method="_on_label_mouse_entered"]

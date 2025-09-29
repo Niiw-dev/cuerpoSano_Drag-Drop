@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://m8ljjukka757"]
+
+[ext_resource type="Texture2D" uid="uid://dcs4lu3gqetpc" path="res://assets/niño.png" id="1_i7yr7"]
+[ext_resource type="Script" path="res://scenes/inicio.gd" id="1_lonch"]
+[ext_resource type="Texture2D" uid="uid://biaurj0h8v7gf" path="res://assets/Fondo principal.jpg" id="1_yi14o"]
+[ext_resource type="Texture2D" uid="uid://c1abnwbjvesya" path="res://assets/Botón iniciar.png" id="2_7og7v"]
+[ext_resource type="Texture2D" uid="uid://c4ysmxursros5" path="res://assets/image (3).png" id="5_k8kbm"]
+[ext_resource type="Texture2D" uid="uid://dsbdas86ojohq" path="res://assets/tituloII.png" id="6_32cix"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idi51"]
+size = Vector2(51.3333, 23.6667)
+
+[node name="Inicio" type="Node2D"]
+script = ExtResource("1_lonch")
+
+[node name="FondoPrincipal" type="Sprite2D" parent="."]
+position = Vector2(555.553, 323.684)
+scale = Vector2(0.989079, 0.932331)
+texture = ExtResource("1_yi14o")
+
+[node name="Niño" type="Sprite2D" parent="."]
+position = Vector2(1002, 329)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("1_i7yr7")
+
+[node name="BotónIniciar" type="Sprite2D" parent="."]
+position = Vector2(558, 450)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_7og7v")
+
+[node name="Area2D" type="Area2D" parent="BotónIniciar"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BotónIniciar/Area2D"]
+position = Vector2(0, -0.000244141)
+scale = Vector2(30, 30)
+shape = SubResource("RectangleShape2D_idi51")
+
+[node name="Nina" type="Sprite2D" parent="."]
+position = Vector2(133, 326)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("5_k8kbm")
+
+[node name="titulo2" type="Sprite2D" parent="."]
+position = Vector2(572, 245)
+scale = Vector2(0.896377, 0.921642)
+texture = ExtResource("6_32cix")
+
+[connection signal="input_event" from="BotónIniciar/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="BotónIniciar/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="BotónIniciar/Area2D" to="." method="_on_area_2d_mouse_exited"]

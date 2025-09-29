@@ -1,0 +1,371 @@
+[gd_scene load_steps=24 format=3 uid="uid://dp3tfvpocupei"]
+
+[ext_resource type="Script" path="res://scenes/test_scene_ii.gd" id="1_e44co"]
+[ext_resource type="Texture2D" uid="uid://biaurj0h8v7gf" path="res://assets/Fondo principal.jpg" id="2_wqnox"]
+[ext_resource type="Texture2D" uid="uid://b87d3m5gf7ipx" path="res://assets/Sombramujer.png" id="3_xe161"]
+[ext_resource type="PackedScene" uid="uid://d086y7w1tmsb3" path="res://scenes/slot.tscn" id="4_bof0v"]
+[ext_resource type="Texture2D" uid="uid://d30c3s4et0lml" path="res://assets/Cabezamujer.png" id="5_6cm0t"]
+[ext_resource type="Texture2D" uid="uid://ix0fyum8g2ii" path="res://assets/hombrosmujer.png" id="6_utorf"]
+[ext_resource type="Texture2D" uid="uid://c2tsnemm5hh6y" path="res://assets/pechos.png" id="7_g5jy1"]
+[ext_resource type="Texture2D" uid="uid://dil4f5v564xgp" path="res://assets/brazosmujer.png" id="8_7gdtj"]
+[ext_resource type="Texture2D" uid="uid://diywqrk2joju7" path="res://assets/estomagomujer.png" id="9_2ofoc"]
+[ext_resource type="Texture2D" uid="uid://bkmmsxh8quctm" path="res://assets/manosmujer.png" id="10_28jlh"]
+[ext_resource type="Texture2D" uid="uid://br6600f8h78h4" path="res://assets/piernasI.png" id="11_iitew"]
+[ext_resource type="Texture2D" uid="uid://d15ypbdcb5021" path="res://assets/vagina.png" id="12_ijbvn"]
+[ext_resource type="Texture2D" uid="uid://cfkv4d7kmoa7w" path="res://assets/PiernasII.png" id="13_msaot"]
+[ext_resource type="Texture2D" uid="uid://bq7s227u15sob" path="res://assets/Piesmujer.png" id="14_ja2ds"]
+[ext_resource type="Script" path="res://scenes/Personaje.gd" id="15_t64k6"]
+[ext_resource type="PackedScene" uid="uid://bxybc2d8dbnio" path="res://scenes/pasivos.tscn" id="16_bun5v"]
+[ext_resource type="Texture2D" uid="uid://dkhor6rcnaafr" path="res://assets/fondo.jpg" id="17_xms0a"]
+[ext_resource type="Texture2D" uid="uid://cf3lnnuta86v8" path="res://assets/you_win-removebg-preview.png" id="18_v61u6"]
+[ext_resource type="Texture2D" uid="uid://tbew2x5x7bv" path="res://assets/1 sin título2_20240602081248.png" id="19_r5jm2"]
+[ext_resource type="Texture2D" uid="uid://yw84lvwmewps" path="res://assets/flecha-correcta.png" id="20_nkhof"]
+[ext_resource type="Texture2D" uid="uid://dsbdas86ojohq" path="res://assets/tituloII.png" id="21_jlj05"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f3vrs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5jjv"]
+size = Vector2(178.421, 702.632)
+
+[node name="TestSceneII" type="Node2D"]
+scale = Vector2(0.95, 0.95)
+script = ExtResource("1_e44co")
+
+[node name="FondoPrincipal" type="Sprite2D" parent="."]
+position = Vector2(587.895, 341.316)
+scale = Vector2(1.04298, 0.982707)
+texture = ExtResource("2_wqnox")
+
+[node name="Sombra" type="Sprite2D" parent="."]
+position = Vector2(1031.57, 340.792)
+scale = Vector2(0.236, 0.236)
+texture = ExtResource("3_xe161")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 71.5789
+offset_top = -2.10526
+offset_right = 111.579
+offset_bottom = 37.8947
+
+[node name="Parts" type="GridContainer" parent="UI"]
+layout_mode = 0
+offset_left = 189.474
+offset_top = 402.105
+offset_right = 755.474
+offset_bottom = 626.105
+columns = 5
+
+[node name="slot" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("5_6cm0t")
+slot_type = 1
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot" index="2"]
+text = "CABEZA"
+
+[node name="slot2" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot2" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("6_utorf")
+slot_type = 2
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot2" index="2"]
+text = "HOMBROS"
+
+[node name="slot3" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot3" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("7_g5jy1")
+slot_type = 3
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot3" index="2"]
+text = "PECHO"
+
+[node name="slot4" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot4" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("8_7gdtj")
+slot_type = 4
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot4" index="2"]
+text = "BRAZOS"
+
+[node name="slot5" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot5" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("9_2ofoc")
+slot_type = 5
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot5" index="2"]
+text = "ESTOMAGO"
+
+[node name="slot6" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot6" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("10_28jlh")
+slot_type = 6
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot6" index="2"]
+text = "MANOS"
+
+[node name="slot7" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot7" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("11_iitew")
+slot_type = 7
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot7" index="2"]
+text = "PIERNAS 
+SUPERIORES"
+
+[node name="slot8" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot8" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("12_ijbvn")
+slot_type = 8
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot8" index="2"]
+text = "VAGINA"
+
+[node name="slot9" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot9" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("13_msaot")
+slot_type = 9
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot9" index="2"]
+text = "PIERNAS 
+INFERIORES"
+
+[node name="slot10" parent="UI/Parts" instance=ExtResource("4_bof0v")]
+layout_mode = 2
+
+[node name="TextureRect" parent="UI/Parts/slot10" index="0"]
+custom_minimum_size = Vector2(110, 110)
+texture = ExtResource("14_ja2ds")
+slot_type = 10
+POINT = 1
+
+[node name="BUGG" parent="UI/Parts/slot10" index="2"]
+text = "PIES"
+
+[node name="Personaje" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 550.526
+offset_top = -25.2632
+offset_right = 590.526
+offset_bottom = 14.7368
+scale = Vector2(1.18, 1.18)
+script = ExtResource("15_t64k6")
+
+[node name="Pasivos" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 39.0
+offset_right = 277.0
+offset_bottom = 80.0
+scale = Vector2(3.90149, 3.98198)
+
+[node name="Pasivos4" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 227.0
+offset_top = 203.0
+offset_right = 405.0
+offset_bottom = 364.0
+slot_type = 4
+
+[node name="Pasivos9" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 514.0
+offset_right = 404.0
+offset_bottom = 587.0
+slot_type = 10
+
+[node name="Pasivos7" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 319.0
+offset_right = 395.0
+offset_bottom = 448.0
+slot_type = 7
+
+[node name="Pasivos5" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 335.0
+offset_right = 426.0
+offset_bottom = 398.0
+slot_type = 6
+
+[node name="Pasivos8" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 422.0
+offset_right = 412.0
+offset_bottom = 535.0
+scale = Vector2(0.964318, 1)
+slot_type = 9
+
+[node name="Pasivos2" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 184.0
+offset_right = 303.0
+offset_bottom = 233.0
+scale = Vector2(3.44507, 1.28312)
+slot_type = 2
+
+[node name="Pasivos10" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 280.0
+offset_right = 379.0
+offset_bottom = 332.0
+slot_type = 5
+
+[node name="Pasivos3" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 227.0
+offset_right = 319.0
+offset_bottom = 268.0
+scale = Vector2(2.51999, 1.29655)
+slot_type = 3
+
+[node name="Pasivos6" parent="UI/Personaje" instance=ExtResource("16_bun5v")]
+layout_mode = 0
+offset_left = 285.46
+offset_top = 314.897
+offset_right = 325.46
+offset_bottom = 355.897
+scale = Vector2(2.19885, 1.29655)
+slot_type = 8
+
+[node name="PON" type="Label" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 612.631
+offset_top = 333.684
+offset_right = 722.631
+offset_bottom = 391.684
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PUNTOS" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 582.105
+offset_top = 274.737
+offset_right = 763.105
+offset_bottom = 340.737
+theme_override_colors/font_color = Color(0, 0.756863, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "PUNTOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resumen" type="Label" parent="."]
+offset_left = 254.737
+offset_top = 289.474
+offset_right = 629.737
+offset_bottom = 365.474
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Arrastra cada parte del cuerpo 
+y sueltala donde corresponda."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0.662745, 0.701961, 0.235294)
+offset_right = 169.0
+offset_bottom = 686.0
+texture = SubResource("PlaceholderTexture2D_f3vrs")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(602.105, 382.105)
+scale = Vector2(0.205965, 0.2)
+texture = ExtResource("17_xms0a")
+
+[node name="YouWin-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(549.474, 443.158)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18_v61u6")
+
+[node name="Nina" type="Sprite2D" parent="."]
+position = Vector2(1033.68, 338.947)
+scale = Vector2(0.236, 0.236)
+texture = ExtResource("19_r5jm2")
+
+[node name="Flecha-correcta" type="Sprite2D" parent="."]
+position = Vector2(78.9474, 332.632)
+rotation = 3.13961
+scale = Vector2(0.656779, 1.40507)
+texture = ExtResource("20_nkhof")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(79.2105, 341.316)
+shape = SubResource("RectangleShape2D_h5jjv")
+
+[node name="titulo2" type="Sprite2D" parent="."]
+position = Vector2(546.316, 158.947)
+scale = Vector2(0.896377, 0.921642)
+texture = ExtResource("21_jlj05")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+
+[editable path="UI/Parts/slot"]
+[editable path="UI/Parts/slot2"]
+[editable path="UI/Parts/slot3"]
+[editable path="UI/Parts/slot4"]
+[editable path="UI/Parts/slot5"]
+[editable path="UI/Parts/slot6"]
+[editable path="UI/Parts/slot7"]
+[editable path="UI/Parts/slot8"]
+[editable path="UI/Parts/slot9"]
+[editable path="UI/Parts/slot10"]
